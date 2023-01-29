@@ -28,7 +28,6 @@ const CSC = (props) => {
         <Select 
           name='country'
           placeholder='Choose your Country'
-          // value={props.frSignUpData.country}
           options={updatedCountries}
           onChange={(e, name) => handleChange(e, name)}
         />

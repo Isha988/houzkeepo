@@ -1,0 +1,33 @@
+@use '../abstracts/' as a;
+
+.top-navbar {
+    background-color: rgba(210, 229, 246, 0.758);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    @include a.flex();
+    justify-content: space-around;
+
+
+    .top-logo {
+        font-weight: bold;
+    }
+    .nav-link-container {
+       padding: 0.4rem 0;
+       overflow: hidden;
+    }
+    .nav-link {
+        color: royalblue;
+        position: relative;
+    }
+    .nav-link::after {
+        @include a.absolute(black, 2px, 100%, 2);
+        bottom: -20%;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s linear;
+    }.nav-link:hover::after{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}

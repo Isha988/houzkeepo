@@ -786,4 +786,43 @@ div.interest-checkbox input {
   background-color: rgba(186, 180, 180, 0.685);
 }
 
+.top-navbar {
+  background-color: rgba(210, 229, 246, 0.758);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.top-navbar .top-logo {
+  font-weight: bold;
+}
+.top-navbar .nav-link-container {
+  padding: 0.4rem 0;
+  overflow: hidden;
+}
+.top-navbar .nav-link {
+  color: royalblue;
+  position: relative;
+}
+.top-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  z-index: 2;
+  bottom: -20%;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+.top-navbar .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /*# sourceMappingURL=main.css.map */

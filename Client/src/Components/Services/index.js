@@ -17,10 +17,11 @@ const Services = () => {
     ))
   return (
     <div className='services-container standard-container'>
-        <h2 className='services-heading'>Our Services</h2>
+        <h2 className='services-heading'>Our Major Services</h2>
         <div className='services'>
             {serviceElements}
         </div>
+        <p className='more-services-notes'>and many more...</p>
     </div>
   )
 }

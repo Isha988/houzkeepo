@@ -168,6 +168,12 @@ a {
   margin-bottom: 0.4rem;
 }
 
+.more-services-notes {
+  font-size: 1.4rem;
+  text-align: right;
+  color: gray;
+}
+
 .steps-container {
   margin: 6rem 0;
   text-align: center;

@@ -17,7 +17,7 @@ function FreelancerProfileForm({ onSubmit }) {
     interests: [],
   })
   const { phone, aadhar, img, age, bio, city } = userdata;
-  const isInvalidForm = phone == "" || aadhar == "" || img == "" || age == "" || bio == "" || city == "" ;
+  const isInvalidForm = phone == "" || aadhar == "" || img == "" || age == "" || bio == "" || city == "" 
 
   function handleChange(e) {
     setUserdata(prevData => ({
@@ -37,8 +37,7 @@ function FreelancerProfileForm({ onSubmit }) {
 
   return (
     <div className='complete-profile freelancer-complete-profile'>
-      <div className='top-img'>
-      </div>
+      <div className='top-img'></div>
       <h2>Tell us more about Yourself</h2>
       <form onSubmit={onSubmit} className='complete-profile-form'>
         <div>
@@ -109,8 +108,7 @@ function FreelancerProfileForm({ onSubmit }) {
               <label htmlFor="home-decor">Home Decor</label>
             </div>
           </div>
-        </div>
-        
+        </div>     
         <button type="submit" disabled={isInvalidForm} onSubmit={onSubmit}>Submit</button>
       </form>
     </div>

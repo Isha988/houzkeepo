@@ -1,14 +1,26 @@
 @use '../abstracts/' as a;
 
-// .freelancer-sign-in-page-container, .client-sign-in-page-container, .signup-form{
-.complete-profile, .signup-form{
-    background-color: aliceblue;
-    width: 100%;
-    height: 100vh;
-    gap: 3rem;
-    text-align: center;
+
+%form-btn {
+    margin-top: 3rem;
+    padding: 0.7rem 2.3rem;
+    width: fit-content;
+    transition: 0.4s;
+    font-size: 1.3rem;
+    border: 2px solid rgb(180, 26, 180);
+    background-color: transparent;
+    color:rgb(180, 26, 180);
+    border-radius: 1.4rem;
 }
-.signin-form-container, .signup-form {
+%form-btn:hover {
+    color: white;
+    background:rgb(180, 26, 180);
+}
+%form-btn:disabled {
+    opacity: 0.4;
+}
+
+.signin-form-container, .signup-form, .complete-profile-form  {
     .heading {
         padding: 0.8rem 0 2.5rem 0;
         margin:0;
@@ -22,7 +34,7 @@
         margin-bottom: 1.7rem;
         border: none;
         border-bottom: 2px solid royalblue;
-        background-color: aliceblue;
+        background-color: transparent;
         transition: 0.5s;
 
     }input::placeholder{
@@ -34,25 +46,6 @@
         border-bottom: 2px solid rgb(214, 27, 214);
         outline: none;
         padding: 0.8rem 1rem;
-    }
-
-    button {
-        font-size: 1.3rem;
-        padding: 0.65rem 0;
-        margin-top: 1.5rem;
-        width: 90%;
-        border-radius: 1.4rem;
-        border: none;
-        color: white;
-        background-color: rgb(220, 10, 220);
-        cursor:pointer;
-        transition: transform 200ms ease-in;
-    }
-    button:hover {
-        transform: translateY(-0.15rem);
-    }
-    button:disabled{
-        opacity: 0.4;
     }
 }
 
@@ -77,6 +70,10 @@
     background-color: rgb(180, 26, 180);
 }
 .signup-form {
+    background-color: aliceblue;
+    width: 100%;
+    gap: 3rem;
+    text-align: center;
     @include a.flex();
     width: 80%;
     margin: auto;
@@ -116,17 +113,7 @@
         }
     }
     button {
-        margin-top: 3rem;
-        padding: 0.5rem 1.4rem;
-        width: fit-content;
-        transition: 0.4s;
-        border: 1px solid rgb(180, 26, 180);
-        background-color: transparent;
-        color:rgb(180, 26, 180);
-    }
-    button:hover {
-        color: white;
-        background:rgb(180, 26, 180);
+       @extend %form-btn;
     }
 }
 .signup-role {
@@ -167,32 +154,44 @@
 
 // Complete Profile
 .complete-profile {
-    background-color: rgba(128, 128, 128, 0.847);
-    text-align: center;
-
+    background-color: aliceblue;
+    overflow-x: hidden;
     .top-img {
         width: 100%;
         margin: auto;
         max-width: 1500px;
         height: 160px;
         padding: 0 1rem;
-        background: url('../../assets/images/bulletin.jpg') center center no-repeat;
+        background: url('../../assets/images/freelancing53.jpg') center center no-repeat;
         background-size: cover;
     }
     h2 {
+        @include a.absolute(transparent, fit-content, fit-content, 12);
         font-size: 1.9rem;
-        padding: 2rem 0;
-        margin: 0 auto;
-        width: 500px;
+        top: 2%;
+        right: -10%;
+        left: unset;
+        transform: translateX(-50%);
+        box-shadow: 0 0 12px -2px black;
+        color: #fff;
+        padding: 1rem 2.4rem;
+        border-left: 4px solid white;
     }
 }
 
 .complete-profile-form {
-    background-color: rgba(0, 0, 0, 0.655);
+    padding-bottom: 2rem;
+    background-color: white;
+    box-shadow: 0 0 8px -3px gray;
+    // background-color: rgba(0, 0, 0, 0.655);
     color: white;
     width: 60%;
     margin:auto;
     @include a.flex(column);
+
+    button {
+        @extend %form-btn;
+     }
 }
 .complete-profile-form>div {
     padding: 1.5rem 2.4rem;
@@ -200,7 +199,113 @@
     text-align: left;
     @include a.flex();
     justify-content: space-between;
+
+    label {
+        font-size: 1.4rem;
+        color:rgb(180, 26, 180);
+    }
+
+    input {
+        color: black;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        min-width: 175px;
+    }
+    input::placeholder {
+        color: rgba(127, 124, 124, 0.539);
+    }
 }
+
+.upload-photo {
+    display: none !important;
+}
+.filled-upload-label {
+    color: green !important;
+}
+
+.upload-label {
+    font-size: 2.8rem !important;
+    color: royalblue;
+    transition: 0.4s;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+.upload-label:hover {
+    font-size: 3rem;
+}
+
+// CSC
+.csc {
+    display: block !important;
+    
+    label {
+        font-size: 1.35rem !important;
+        text-align: center !important; 
+        display: block;
+        margin: 2rem auto 0.5rem auto;
+    }
+    .location-selector {
+        color: black;
+        margin-bottom: 1.2rem;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.bio-heading, .interest-heading {
+    font-size: 1.35rem;
+    margin: 2rem auto 0.5rem auto;
+}
+
+textarea {
+    min-width: 400px;
+    min-height: 180px;
+    background-color: rgba(227, 227, 227, 0.651);
+    color: black;
+    font-size: 1.1rem;
+    padding: 0.45rem 0.5rem;
+    margin-top: 1rem;
+    border-radius: 0.6rem;
+}
+.first-col {
+    div {
+        justify-content: center;
+    }
+}
+
+.interests-section {
+    margin-top: 1.5rem;
+    width: 80% !important;
+}
+
+.first-col, .second-col {
+    
+}
+
+ div.interest-checkbox { 
+    display: flex;
+    justify-content: left;
+    margin-bottom: 1rem;
+
+    label {
+        flex-wrap: nowrap;
+    }
+
+    input {
+        font-size: 1.2rem;
+        transform: scale(1.6);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -251,13 +356,13 @@
     }
 }
 
-.interests-section {
+.interests-sectioin {
     @include a.flex();
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
 
-    .first-col>div, .second-col>div{
+    .firsot-col>div, .secoond-col>div{
         @include a.flex();
         justify-content: start;
         gap: 0.75rem;
@@ -272,7 +377,7 @@
         margin: 0;
     }
 
-    .second-col {
+    .seconid-col {
         input[type=text] {
              width: 130px;
              height: 10px;

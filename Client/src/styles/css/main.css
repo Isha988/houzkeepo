@@ -395,7 +395,8 @@ a {
   text-decoration: underline;
 }
 
-.complete-profile-form button, .signup-form button {
+.signin-form-container button, .complete-profile-form button, .signup-form button {
+  cursor: pointer;
   margin-top: 3rem;
   padding: 0.7rem 2.3rem;
   width: fit-content;
@@ -407,12 +408,12 @@ a {
   border-radius: 1.4rem;
 }
 
-.complete-profile-form button:hover, .signup-form button:hover {
+.signin-form-container button:hover, .complete-profile-form button:hover, .signup-form button:hover {
   color: white;
   background: rgb(180, 26, 180);
 }
 
-.complete-profile-form button:disabled, .signup-form button:disabled {
+.signin-form-container button:disabled, .complete-profile-form button:disabled, .signup-form button:disabled {
   opacity: 0.4;
 }
 
@@ -440,20 +441,6 @@ a {
   border-bottom: 2px solid rgb(214, 27, 214);
   outline: none;
   padding: 0.8rem 1rem;
-}
-
-.sign-in-page-left, .sign-in-page-right {
-  box-shadow: 0 0 12px -8px black;
-  padding: 1.5rem 2rem;
-  border-radius: 0.7rem;
-}
-
-.signup-link-container p {
-  font-size: 1.4rem;
-  max-width: 400px;
-}
-.signup-link-container button {
-  padding: 0.5rem 2rem;
 }
 
 .signup-form-container {
@@ -691,6 +678,53 @@ div.interest-checkbox label {
 div.interest-checkbox input {
   font-size: 1.2rem;
   transform: scale(1.6);
+}
+
+.signin-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100vh;
+  background: url("../../assets/images/pattern-bg-c.jpg") center no-repeat;
+  background-size: cover;
+}
+.signin-form-container .signin-logo {
+  transform: scale(6);
+  display: block;
+  text-align: center;
+  margin: 3rem auto;
+}
+.signin-form-container .m-heading {
+  margin: 0 0 2.5rem 0;
+  font-size: 2.4rem;
+}
+.signin-form-container input {
+  color: aliceblue;
+  border-bottom: 2px solid aliceblue;
+  padding: 0.5rem 1rem;
+}
+.signin-form-container input:focus {
+  padding: 0.5rem 1rem;
+}
+.signin-form-container button {
+  color: black;
+  border-color: black;
+}
+.signin-form-container button:hover {
+  background: white;
+  color: black;
+  border-color: white;
+  box-shadow: 0 0 12px -4px black;
+}
+
+.signin-form-container > div {
+  background-color: rgba(244, 143, 234, 0.596);
+  padding: 4rem 5rem;
+  border-radius: 0.65rem;
+  text-align: center;
+  width: max-content;
 }
 
 .toggle-signup {

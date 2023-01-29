@@ -9,20 +9,32 @@
     text-align: center;
 }
 .signin-form-container, .signup-form {
-    h2 {
+    .heading {
         padding: 0.8rem 0 2.5rem 0;
         margin:0;
+        font-size: 2rem;
     }
     input {
         display: block;
-        padding: 0.8rem 2rem;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        border: 1px dotted gray;
+        padding: 0.8rem 0.2rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.7rem;
+        border: none;
+        border-bottom: 2px solid royalblue;
+        background-color: aliceblue;
+        transition: 0.5s;
+
     }input::placeholder{
-        font-size: 1rem;
+        font-size: 1.15rem;
         color: rgba(83, 79, 79, 0.813);
     }
+   
+    input:focus {
+        border-bottom: 2px solid rgb(214, 27, 214);
+        outline: none;
+        padding: 0.8rem 1rem;
+    }
+
     button {
         font-size: 1.3rem;
         padding: 0.65rem 0;
@@ -59,7 +71,19 @@
     }
 }
 
+// Sign Up form
+.signup-form-container {
+    background-color: rgb(180, 26, 180);
+    padding: 1.5rem 0;
+}
 .signup-form {
+    width: 80%;
+    margin: auto;
+
+    img {
+        border-radius: 0.7rem;
+    }
+
     form {
         padding: 2rem;
         box-shadow: 0 0 12px -8px black;
@@ -69,6 +93,54 @@
         padding-bottom: 1rem;
         text-align: left;
         display: block;
+    }
+
+    .top-form {
+        @include a.flex();
+
+        div {
+            width: 100%;
+            @include a.flex(column);
+        }
+    }
+    button {
+        margin-top: 3rem;
+        padding: 0.5rem 1.4rem;
+        width: fit-content;
+        transition: 0.4s;
+        border: 1px solid rgb(180, 26, 180);
+        background-color: transparent;
+        color:rgb(180, 26, 180);
+    }
+    button:hover {
+        color: white;
+        background:rgb(180, 26, 180);
+    }
+}
+.signup-role {
+    @include a.flex();
+    gap: 2rem;
+
+    .role {
+        @include a.flex(column);
+        border: 2px outset rgba(128, 128, 128, 0.505);
+        padding: 1rem 1.4rem;
+        border-radius: 0.7rem;
+        min-height: 100px;
+
+         p {
+            margin: 0;
+            max-width: 300px;
+         }
+
+        div {
+            @include a.flex();
+            justify-content: space-between;
+            width: 100%;
+        }
+        .icon {
+            transform: scale(2);
+        }
     }
 }
 
@@ -153,36 +225,3 @@
     margin: 7rem 0;
     background-color: rgba(186, 180, 180, 0.685);
 }
-
-
-// .forget-password-container {
-//     margin: 8rem auto 0 auto;
-//     background-color: a.$primary-clr;
-//     padding: 3rem;
-//     width: fit-content;
-//     text-align: center;
-
-//     h1 {
-//       color: a.$secondary-clr;
-//       margin-bottom: 3rem;    
-//     }
-// }
-
-// .forget-password-link {
-//     margin-top: 0.8rem;
-//     display: block;
-//     color: gray !important;
-// }
-// .sign-up-link {
-//     color: gray;
-//     a{
-//         color: white;
-//     }
-// }
-// .ques-mark {
-//     display: inline-block;
-//     transition: transform 200ms ease-in;
-// }
-// .forget-password-link:hover .ques-mark {
-//     transform: rotate(180deg);
-// }

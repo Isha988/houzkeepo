@@ -1,0 +1,22 @@
+@mixin flex($align:'row') {
+    display: flex;
+    flex-direction: $align;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin grid($rowNum:3){
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat($rowNum, 1fr);
+}
+
+@mixin absolute($bg-clr:black,$height:100%,$width:100%, $z-index:-1) {
+    content: '';
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $bg-clr;
+    z-index: $z-index;
+}

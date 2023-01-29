@@ -1,0 +1,23 @@
+@use '../abstracts/' as a;
+
+.hero-container {
+    padding: 3rem 3rem;
+    background: url('../../assets/images/hw.jpeg') no-repeat center;
+    background-size: cover;
+    background-position-y: -20px;
+
+    .heading {
+        color: a.$tertiary-clr;
+        font-size: 3rem;
+        max-width: 500px;
+    }
+
+    .hero-points {
+        font-size: 1.1rem;
+
+        li {
+          line-height: 1.5;
+        }
+    }
+}
+

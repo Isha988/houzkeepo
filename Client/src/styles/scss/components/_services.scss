@@ -1,0 +1,66 @@
+@use '../abstracts/' as a;
+
+.services-container {
+    margin-top: 5rem;
+
+    .services-heading {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.services {
+    .service:nth-child(2n){
+        direction: rtl;
+
+        .text-part{
+            direction: ltr;
+        }
+    }
+}
+
+.service {
+    @include a.flex(row);
+
+    .text-part {
+        padding: 3rem 1.5rem;
+        width: 100%;
+        background-color: rgba(215, 200, 200, 0.345);
+
+    .heading {
+        font-size: 2rem;
+        margin-bottom: 0.35rem;
+      }
+    .sub-heading {
+        margin-top: 0;
+      }
+    }
+
+    .description {
+        max-width: 500px;
+        text-align: justify;
+    }
+
+    .img-part {
+        padding: 2.3rem 1.5rem;
+        width: 100%;
+        height: 100%;
+
+        img {
+            // height: 100%;
+            max-width: 600px;
+            // width: 100%;
+        }
+    }
+    
+}
+
+.list-items {
+    list-style-type: "✅";
+
+    li{
+    margin-bottom: 0.4rem;
+    }
+
+}

@@ -1,0 +1,47 @@
+@use '../abstracts/' as a;
+
+.testimonials-container {
+    padding: 5rem 0;
+    @include a.flex();
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: rgba(207, 221, 235, 0.642);
+    box-shadow: 0 0 8px -3px rgba(128, 128, 128, 0.9);
+    border-radius: 0.65rem;
+    padding: 2rem;
+    transition: transform 0.3s;
+
+    .description {
+        max-width: 450px;
+    }
+
+    .double-quotes {
+        color: blue;
+        width: 30px;
+    }
+    .personal-info {
+        @include a.flex();
+        gap: 1.2rem;
+        justify-content: flex-start;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        .name {
+            margin: 0;
+        }
+        .work {
+            color: gray;
+            margin: 0;
+        }
+        
+    }
+    img {
+        width: 70px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+}
+.testimonial:hover {
+    transform: translateY(-10px) ;
+}

@@ -1,0 +1,61 @@
+%btn {
+    padding: 1.2rem 2.4rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0px gray;
+    font-size: 1rem;
+}
+.btn-y {
+    @extend %btn;
+    background-color: rgb(14, 128, 205);
+    color: white;
+    border-color: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn-y::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform 0.2s ease-in;
+    z-index: -1;
+}
+.btn-y:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+
+.btn-x {
+    @extend %btn;
+    background-color: rgba(255, 255, 255, 0.256);
+    transition: 0.25s;
+    color: black;
+    border-color: white;
+}
+.btn-x:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-z {
+    @extend %btn;
+    border-radius: 10rem;
+    padding: 0.8rem 3rem;
+    border: none;
+    background-color: green;
+    color: white;
+    transition: 0.3s;
+}
+.btn-z:hover {
+    box-shadow: 0 2px 14px -2px rgba(5, 5, 5, 0.838);
+    transform: scale(1.02);
+}

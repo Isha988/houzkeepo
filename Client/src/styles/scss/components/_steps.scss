@@ -1,0 +1,40 @@
+@use '../abstracts/' as a;
+
+.steps-container {
+   margin: 6rem 0;
+   text-align: center;
+
+   .text {
+      max-width: 320px;
+   }
+
+   .count {
+      border: 1.4px solid royalblue;
+      color: royalblue;
+      height: 50px;
+      font-size: 1.5rem;
+      width: 50px;
+      @include a.flex;
+      border-radius: 50%;
+   }
+}
+
+.steps {
+    @include a.flex();
+    margin-top: 3rem;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.step {
+    @include a.flex(column);
+    transition: 0.4s;
+    transform: translateY(103%);
+    opacity: 0;
+}
+
+.active-step {
+   transform: translateY(0);
+   opacity: 1;
+}
+

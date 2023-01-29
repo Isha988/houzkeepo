@@ -1,0 +1,551 @@
+@charset "UTF-8";
+.hero-container {
+  padding: 3rem 3rem;
+  background: url("../../assets/images/hw.jpeg") no-repeat center;
+  background-size: cover;
+  background-position-y: -20px;
+}
+.hero-container .heading {
+  color: rgb(210, 27, 223);
+  font-size: 3rem;
+  max-width: 500px;
+}
+.hero-container .hero-points {
+  font-size: 1.1rem;
+}
+.hero-container .hero-points li {
+  line-height: 1.5;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.standard-container {
+  width: 90%;
+  margin: 5rem auto;
+}
+
+.l-heading {
+  font-size: 3rem;
+}
+
+.m-heading {
+  font-size: 2.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-z, .btn-x, .btn-y {
+  padding: 1.2rem 2.4rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0px gray;
+  font-size: 1rem;
+}
+
+.btn-y {
+  background-color: rgb(14, 128, 205);
+  color: white;
+  border-color: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-y::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform 0.2s ease-in;
+  z-index: -1;
+}
+
+.btn-y:hover::after {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.btn-x {
+  background-color: rgba(255, 255, 255, 0.256);
+  transition: 0.25s;
+  color: black;
+  border-color: white;
+}
+
+.btn-x:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-z {
+  border-radius: 10rem;
+  padding: 0.8rem 3rem;
+  border: none;
+  background-color: green;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-z:hover {
+  box-shadow: 0 2px 14px -2px rgba(5, 5, 5, 0.838);
+  transform: scale(1.02);
+}
+
+.services-container {
+  margin-top: 5rem;
+}
+.services-container .services-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.services .service:nth-child(2n) {
+  direction: rtl;
+}
+.services .service:nth-child(2n) .text-part {
+  direction: ltr;
+}
+
+.service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.service .text-part {
+  padding: 3rem 1.5rem;
+  width: 100%;
+  background-color: rgba(215, 200, 200, 0.345);
+}
+.service .text-part .heading {
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+.service .text-part .sub-heading {
+  margin-top: 0;
+}
+.service .description {
+  max-width: 500px;
+  text-align: justify;
+}
+.service .img-part {
+  padding: 2.3rem 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+.service .img-part img {
+  max-width: 600px;
+}
+
+.list-items {
+  list-style-type: "✅";
+}
+.list-items li {
+  margin-bottom: 0.4rem;
+}
+
+.steps-container {
+  margin: 6rem 0;
+  text-align: center;
+}
+.steps-container .text {
+  max-width: 320px;
+}
+.steps-container .count {
+  border: 1.4px solid royalblue;
+  color: royalblue;
+  height: 50px;
+  font-size: 1.5rem;
+  width: 50px;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.steps {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  transform: translateY(103%);
+  opacity: 0;
+}
+
+.active-step {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.features-container {
+  width: 90%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+}
+
+.left-features-container {
+  width: 100%;
+}
+.left-features-container p {
+  margin: -1rem 0 3.5rem 0;
+}
+
+.right-features-container {
+  width: 100%;
+  text-align: center;
+}
+.right-features-container img {
+  height: 100%;
+  max-width: 500px;
+  padding-top: 3rem;
+  animation: rotate infinite 5s linear;
+}
+
+.features-boxes {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: justify;
+  gap: 1.5rem;
+}
+.features-boxes p {
+  margin: 0;
+}
+.features-boxes .icon {
+  font-size: 6rem;
+  color: blue;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.testimonials-container {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: rgba(207, 221, 235, 0.642);
+  box-shadow: 0 0 8px -3px rgba(128, 128, 128, 0.9);
+  border-radius: 0.65rem;
+  padding: 2rem;
+  transition: transform 0.3s;
+}
+.testimonial .description {
+  max-width: 450px;
+}
+.testimonial .double-quotes {
+  color: blue;
+  width: 30px;
+}
+.testimonial .personal-info {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.testimonial .personal-info .name {
+  margin: 0;
+}
+.testimonial .personal-info .work {
+  color: gray;
+  margin: 0;
+}
+.testimonial img {
+  width: 70px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+}
+
+.footer {
+  padding: 2rem 2rem 0 2rem;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.footer-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-links-container ul {
+  padding: 0;
+}
+.footer-links-container li {
+  list-style: none;
+}
+.footer-links-container li a {
+  color: gray;
+  text-decoration: none;
+  transition: color 0.24s;
+}
+.footer-links-container li a:hover {
+  color: royalblue;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  border-bottom: 1px solid gray;
+}
+.footer-social-icons p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.footer-social-icons a {
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.footer-social-icons a:hover {
+  background-color: white;
+  color: royalblue;
+}
+.footer-social-icons .icons {
+  border: 2px solid gray;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+
+.footer-bottom {
+  color: white;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  gap: 1rem;
+  background-color: rgba(92, 202, 235, 0.61);
+}
+.footer-bottom a {
+  color: whitesmoke;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.freelancer-sign-in-page-container, .client-sign-in-page-container, .signup-form {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  width: 100%;
+  height: 100vh;
+  gap: 3rem;
+  text-align: center;
+}
+
+.signin-form-container h2, .signup-form h2 {
+  padding: 0.8rem 0 2.5rem 0;
+  margin: 0;
+}
+.signin-form-container input, .signup-form input {
+  display: block;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  border: 1px dotted gray;
+}
+.signin-form-container input::placeholder, .signup-form input::placeholder {
+  font-size: 1rem;
+  color: rgba(83, 79, 79, 0.813);
+}
+.signin-form-container button, .signup-form button {
+  font-size: 1.3rem;
+  padding: 0.65rem 0;
+  margin-top: 1.5rem;
+  width: 90%;
+  border-radius: 1.4rem;
+  border: none;
+  color: white;
+  background-color: rgb(220, 10, 220);
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+.signin-form-container button:hover, .signup-form button:hover {
+  transform: translateY(-0.15rem);
+}
+.signin-form-container button:disabled, .signup-form button:disabled {
+  opacity: 0.4;
+}
+
+.sign-in-page-left, .sign-in-page-right {
+  box-shadow: 0 0 12px -8px black;
+  padding: 1.5rem 2rem;
+  border-radius: 0.7rem;
+}
+
+.signup-link-container p {
+  font-size: 1.4rem;
+  max-width: 400px;
+}
+.signup-link-container button {
+  padding: 0.5rem 2rem;
+}
+
+.signup-form form {
+  padding: 2rem;
+  box-shadow: 0 0 12px -8px black;
+}
+.signup-form label {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  display: block;
+}
+
+.toggle-signup {
+  position: absolute;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  top: 1rem;
+  z-index: 5;
+}
+.toggle-signup div {
+  cursor: pointer;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: black;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  position: relative;
+  background-color: ghostwhite;
+  transition: 0.3s;
+}
+.toggle-signup div:hover {
+  background-color: black;
+  color: white;
+}
+.toggle-signup div + div::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 2px;
+  background-color: black;
+  z-index: -2;
+  right: 100%;
+}
+
+.freelancer-signup-second-pg {
+  height: unset;
+  padding: 6.5rem 0 3rem 0;
+}
+.freelancer-signup-second-pg textarea {
+  min-width: 400px;
+  min-height: 180px;
+}
+
+.interests-section {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.interests-section .first-col > div, .interests-section .second-col > div {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  gap: 0.75rem;
+}
+.interests-section input {
+  margin: 0;
+  padding: 0;
+}
+.interests-section label {
+  padding: 0;
+  margin: 0;
+}
+.interests-section .second-col input[type=text] {
+  width: 130px;
+  height: 10px;
+  padding: 0.5rem 2rem;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: gray;
+  display: block;
+}
+
+.sepration {
+  height: 2px;
+  width: 500px;
+  margin: 7rem 0;
+  background-color: rgba(186, 180, 180, 0.685);
+}
+
+/*# sourceMappingURL=main.css.map */

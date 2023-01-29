@@ -1,0 +1,48 @@
+@use '../abstracts/' as a;
+
+.features-container{
+    width: 90%;
+    margin: 5rem auto;
+    @include a.flex();
+}
+
+.left-features-container {
+    width: 100%;
+
+    p {
+        margin: -1rem 0 3.5rem 0;
+    }
+}
+
+.right-features-container {
+    width: 100%;
+    text-align: center;
+    img {
+        height: 100%;
+        max-width: 500px;
+        padding-top: 3rem;
+        animation: rotate infinite 5s linear;
+    }
+}
+
+.features-boxes {
+    p {
+        margin: 0;
+    }
+    @include a.grid(2);
+    text-align: justify;
+    gap: 1.5rem;
+
+
+    .icon {
+        font-size: 6rem;
+        color: blue;
+    }
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    20%{transform: rotate(10deg);}
+    80%{transform: rotate(-10deg);}
+    100%{transform: rotate(-0deg);}
+}

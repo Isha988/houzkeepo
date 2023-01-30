@@ -11,15 +11,15 @@ const HeroSection = () => {
   }
   return (
     <div className='hero-container'>
-        <h2 className='heading'>Hire the best freelancers for any job, Online.</h2>
+        <h2 className='heading'>Hire for on demand door step home services, Online.</h2>
         <ul className='hero-points'>
-            <li>World's largest freelance marketplace</li>
-            <li>Any job you can possibly think of</li>
-            <li>Save up to 90% & get quotes for free</li>
-            <li>Pay only when you're 100% happy</li>
+            <li>World's most trusted and safe service providers</li>
+            <li>Get the right domestic help today in just 5 minutes!</li>
+            <li>Book a houzKeepo for any domestic help you can imagine!</li>
+            <li>Save upto 70% for your first order!</li>
         </ul>
-        <button name='client' className='btn-x' onClick={routeToSignIn}>Hire a Freelancer</button>
-        <button name='freelancer' className='btn-y' onClick={routeToSignIn}>Earn Money Freelancing</button>
+        <button name='client' className='btn-x' onClick={routeToSignIn}>Book a HouzKeepo</button>
+        <button name='freelancer' className='btn-y' onClick={routeToSignIn}>Become a HouzKeepo</button>
     </div>
   )
 }

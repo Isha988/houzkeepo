@@ -39,7 +39,7 @@ const StepsSection = () => {
 
   return (
     <div ref={boxRef} className='steps-container'>
-        <h2 className='l-heading'>Hiring Made Easy</h2>
+        <h2 className='l-heading'>Household work made easy!</h2>
         <div className='steps'>
          {stepsElements}
         </div>

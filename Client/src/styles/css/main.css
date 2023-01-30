@@ -39,11 +39,16 @@ img {
 }
 
 .m-heading {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 a {
   text-decoration: none;
+}
+
+.highlight {
+  display: block;
+  color: rgb(210, 17, 210);
 }
 
 .btn-z, .btn-x, .btn-y {
@@ -161,6 +166,12 @@ a {
 }
 .list-items li {
   margin-bottom: 0.4rem;
+}
+
+.more-services-notes {
+  font-size: 1.4rem;
+  text-align: right;
+  color: gray;
 }
 
 .steps-container {
@@ -384,66 +395,90 @@ a {
   text-decoration: underline;
 }
 
-.freelancer-sign-in-page-container, .client-sign-in-page-container, .signup-form {
+.signin-form-container button, .complete-profile-form button, .signup-form button {
+  cursor: pointer;
+  margin-top: 3rem;
+  padding: 0.7rem 2.3rem;
+  width: fit-content;
+  transition: 0.4s;
+  font-size: 1.3rem;
+  border: 2px solid rgb(180, 26, 180);
+  background-color: transparent;
+  color: rgb(180, 26, 180);
+  border-radius: 1.4rem;
+}
+
+.signin-form-container button:hover, .complete-profile-form button:hover, .signup-form button:hover {
+  color: white;
+  background: rgb(180, 26, 180);
+}
+
+.signin-form-container button:disabled, .complete-profile-form button:disabled, .signup-form button:disabled {
+  opacity: 0.4;
+}
+
+.signin-form-container .heading, .signup-form .heading, .complete-profile-form .heading {
+  padding: 0.8rem 0 2.5rem 0;
+  margin: 0;
+  font-size: 2rem;
+}
+.signin-form-container input, .signup-form input, .complete-profile-form input {
+  display: block;
+  padding: 0.8rem 0.2rem;
+  font-size: 1.2rem;
+  color: rgb(30, 28, 28);
+  margin-bottom: 1.7rem;
+  border: none;
+  border-bottom: 2px solid royalblue;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.signin-form-container input::placeholder, .signup-form input::placeholder, .complete-profile-form input::placeholder {
+  font-size: 1.15rem;
+  color: rgba(83, 79, 79, 0.813);
+}
+.signin-form-container input:focus, .signup-form input:focus, .complete-profile-form input:focus {
+  border-bottom: 2px solid rgb(214, 27, 214);
+  outline: none;
+  padding: 0.8rem 1rem;
+}
+
+.signup-form-container {
+  background-color: rgb(180, 26, 180);
+}
+
+.signup-form {
+  background-color: aliceblue;
+  width: 100%;
+  gap: 3rem;
+  text-align: center;
   display: flex;
   flex-direction: "row";
   align-items: center;
   justify-content: center;
-  background-color: aliceblue;
-  width: 100%;
-  height: 100vh;
-  gap: 3rem;
-  text-align: center;
+  width: 80%;
+  margin: auto;
+  border-radius: 0.4rem;
+  padding-bottom: 1re;
 }
-
-.signin-form-container h2, .signup-form h2 {
-  padding: 0.8rem 0 2.5rem 0;
-  margin: 0;
+.signup-form .password {
+  position: relative;
 }
-.signin-form-container input, .signup-form input {
-  display: block;
-  padding: 0.8rem 2rem;
+.signup-form .password-valid-logo {
+  content: "";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  z-index: 2;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  border: 1px dotted gray;
+  color: green;
+  top: 30%;
+  right: 27%;
 }
-.signin-form-container input::placeholder, .signup-form input::placeholder {
-  font-size: 1rem;
-  color: rgba(83, 79, 79, 0.813);
+.signup-form img {
+  border-radius: 0.5rem;
 }
-.signin-form-container button, .signup-form button {
-  font-size: 1.3rem;
-  padding: 0.65rem 0;
-  margin-top: 1.5rem;
-  width: 90%;
-  border-radius: 1.4rem;
-  border: none;
-  color: white;
-  background-color: rgb(220, 10, 220);
-  cursor: pointer;
-  transition: transform 200ms ease-in;
-}
-.signin-form-container button:hover, .signup-form button:hover {
-  transform: translateY(-0.15rem);
-}
-.signin-form-container button:disabled, .signup-form button:disabled {
-  opacity: 0.4;
-}
-
-.sign-in-page-left, .sign-in-page-right {
-  box-shadow: 0 0 12px -8px black;
-  padding: 1.5rem 2rem;
-  border-radius: 0.7rem;
-}
-
-.signup-link-container p {
-  font-size: 1.4rem;
-  max-width: 400px;
-}
-.signup-link-container button {
-  padding: 0.5rem 2rem;
-}
-
 .signup-form form {
   padding: 2rem;
   box-shadow: 0 0 12px -8px black;
@@ -453,6 +488,243 @@ a {
   padding-bottom: 1rem;
   text-align: left;
   display: block;
+}
+.signup-form .top-form {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+}
+.signup-form .top-form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.signup-role {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.signup-role .role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: 2px outset rgba(128, 128, 128, 0.505);
+  padding: 1rem 1.4rem;
+  border-radius: 0.7rem;
+  min-height: 100px;
+}
+.signup-role .role input {
+  transform: scale(1.2);
+}
+.signup-role .role p {
+  margin: 0;
+  max-width: 300px;
+}
+.signup-role .role div {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.signup-role .role .icon {
+  transform: scale(2);
+}
+
+.complete-profile {
+  background-color: aliceblue;
+  overflow-x: hidden;
+}
+.complete-profile .top-img {
+  width: 100%;
+  margin: auto;
+  max-width: 1500px;
+  height: 160px;
+  padding: 0 1rem;
+  background: url("../../assets/images/freelancing53.jpg") center center no-repeat;
+  background-size: cover;
+}
+.complete-profile h2 {
+  content: "";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  z-index: 12;
+  font-size: 1.9rem;
+  top: 2%;
+  right: -10%;
+  left: unset;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px -2px black;
+  color: #fff;
+  padding: 1rem 2.4rem;
+  border-left: 4px solid white;
+}
+
+.complete-profile-form {
+  padding-bottom: 2rem;
+  background-color: white;
+  box-shadow: 0 0 8px -3px gray;
+  color: white;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.complete-profile-form > div {
+  padding: 1.5rem 2.4rem;
+  width: 500px;
+  text-align: left;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.complete-profile-form > div label {
+  font-size: 1.4rem;
+  color: rgb(180, 26, 180);
+}
+.complete-profile-form > div input {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  min-width: 175px;
+}
+.complete-profile-form > div input::placeholder {
+  color: rgba(127, 124, 124, 0.539);
+}
+
+.upload-photo {
+  display: none !important;
+}
+
+.filled-upload-label {
+  color: green !important;
+}
+
+.upload-label {
+  font-size: 2.8rem !important;
+  color: royalblue;
+  transition: 0.4s;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.upload-label:hover {
+  font-size: 3rem;
+}
+
+.csc {
+  display: block !important;
+}
+.csc label {
+  font-size: 1.35rem !important;
+  text-align: center !important;
+  display: block;
+  margin: 2rem auto 0.5rem auto;
+}
+.csc .location-selector {
+  color: black;
+  margin-bottom: 1.2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.bio-heading, .interest-heading {
+  font-size: 1.35rem;
+  margin: 2rem auto 0.5rem auto;
+}
+
+textarea {
+  min-width: 400px;
+  min-height: 180px;
+  background-color: rgba(227, 227, 227, 0.651);
+  color: black;
+  font-size: 1.1rem;
+  padding: 0.45rem 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.6rem;
+}
+
+.first-col div {
+  justify-content: center;
+}
+
+.interests-section {
+  margin-top: 1.5rem;
+  width: 80% !important;
+}
+
+div.interest-checkbox {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 1rem;
+}
+div.interest-checkbox label {
+  flex-wrap: nowrap;
+}
+div.interest-checkbox input {
+  font-size: 1.2rem;
+  transform: scale(1.6);
+}
+
+.signin-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100vh;
+  background: url("../../assets/images/pattern-bg-c.jpg") center no-repeat;
+  background-size: cover;
+}
+.signin-form-container .signin-logo {
+  transform: scale(6);
+  display: block;
+  text-align: center;
+  margin: 3rem auto;
+}
+.signin-form-container .m-heading {
+  margin: 0 0 2.5rem 0;
+  font-size: 2.4rem;
+}
+.signin-form-container input {
+  color: aliceblue;
+  border-bottom: 2px solid aliceblue;
+  padding: 0.5rem 1rem;
+}
+.signin-form-container input:focus {
+  padding: 0.5rem 1rem;
+}
+.signin-form-container button {
+  color: black;
+  border-color: black;
+}
+.signin-form-container button:hover {
+  background: white;
+  color: black;
+  border-color: white;
+  box-shadow: 0 0 12px -4px black;
+}
+
+.signin-form-container > div {
+  background-color: rgba(244, 143, 234, 0.596);
+  padding: 4rem 5rem;
+  border-radius: 0.65rem;
+  text-align: center;
+  width: max-content;
 }
 
 .toggle-signup {
@@ -504,7 +776,7 @@ a {
   min-height: 180px;
 }
 
-.interests-section {
+.interests-sectioin {
   display: flex;
   flex-direction: "row";
   align-items: center;
@@ -513,7 +785,7 @@ a {
   align-items: flex-start;
   gap: 2rem;
 }
-.interests-section .first-col > div, .interests-section .second-col > div {
+.interests-sectioin .firsot-col > div, .interests-sectioin .secoond-col > div {
   display: flex;
   flex-direction: "row";
   align-items: center;
@@ -521,15 +793,15 @@ a {
   justify-content: start;
   gap: 0.75rem;
 }
-.interests-section input {
+.interests-sectioin input {
   margin: 0;
   padding: 0;
 }
-.interests-section label {
+.interests-sectioin label {
   padding: 0;
   margin: 0;
 }
-.interests-section .second-col input[type=text] {
+.interests-sectioin .seconid-col input[type=text] {
   width: 130px;
   height: 10px;
   padding: 0.5rem 2rem;
@@ -546,6 +818,45 @@ a {
   width: 500px;
   margin: 7rem 0;
   background-color: rgba(186, 180, 180, 0.685);
+}
+
+.top-navbar {
+  background-color: rgba(210, 229, 246, 0.758);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.top-navbar .top-logo {
+  font-weight: bold;
+}
+.top-navbar .nav-link-container {
+  padding: 0.4rem 0;
+  overflow: hidden;
+}
+.top-navbar .nav-link {
+  color: royalblue;
+  position: relative;
+}
+.top-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  z-index: 2;
+  bottom: -20%;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+.top-navbar .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /*# sourceMappingURL=main.css.map */

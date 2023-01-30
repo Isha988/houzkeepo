@@ -1,14 +1,14 @@
 export const stepsData = [
     {
-        heading: 'Talk to One of Our Industry Experts',
-        description: 'An expert on our team will work with you to understand your goals, technical needs, and team dynamics.',
+        heading: 'Describe your Work to us ',
+        description: 'Either select services from pre existing icons or Describe us the job in your own words, if not present.',
     },
     {
-        heading: 'Work With Hand-Selected Talent',
-        description: 'Within days, we\'ll introduce you to the right talent for your project. Average time to match is under 24 hours',
+        heading: 'Set up the filters',
+        description: 'Apply various Filters (Age, Gender etc..) to help us get the best match of worker for you',
     },
      {
-        heading: 'The Right Fit, Guaranteed',
-        description: 'Work with your new team member on a trial basis (pay only if satisfied), ensuring you hire the right people for the job.',
+        heading: 'Select one!',
+        description: 'Workers willing to accompany the task would notify you for you to make your best choice!',
     }
 ]

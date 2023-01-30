@@ -8,8 +8,8 @@ const Features = () => {
     <div className='features-container'>
         
         <div className='left-features-container'>
-            <h1 className='l-heading'>Build Amazing Teams, On Demand</h1>
-            <p>Quickly assemble the teams you need, exactly when you need them.</p>
+            <h1 className='l-heading'>Manage your work and home with our door step services</h1>
+            <p>Do not let household work be a hurdle!</p>
             <div className='features-boxes'>
             <div className='features-box'>
                     <GiSandsOfTime className='icon'/>
@@ -19,7 +19,7 @@ const Features = () => {
             <div className='features-box'>
                     <GiGrowth className='icon'/>
                     <h2>The Top 3%</h2>
-                    <p>Every applicant to the Toptal network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
+                    <p>Every applicant to the Houzkeepo network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
             </div>
             <div className='features-box'>
                     <FaCubes className='icon'/>

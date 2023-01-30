@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 // import {FreelancerSignupLink} from '../Signup/Freelancer'
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import {FaUserCircle} from 'react-icons/fa'
 import {login} from "../../reducers/user/userSlice";
 
 
@@ -74,8 +75,10 @@ const invalidSignIn = email === '' || password === ''
 
   return (
     <div className='signin-form-container'>
-          <h2 className='m-heading'>Sign In</h2>
-            <form className='sign-in-form' onSubmit={handleSignin}>
+       <div>
+          <FaUserCircle className='signin-logo'/>
+          <h2 className='m-heading'>Sign in</h2>
+            <form className='signin-form' onSubmit={handleSignin}>
                 <input 
                   type="email"
                   name="email"
@@ -92,6 +95,7 @@ const invalidSignIn = email === '' || password === ''
                   <button disabled={invalidSignIn} type="submit" onSubmit={handleSignin}>Sign In</button>
                   {error && <p>{error.message}</p>}
             </form>
+          </div>
 
             {isError && (
               <div>{message}</div>
